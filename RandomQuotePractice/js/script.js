@@ -80,7 +80,7 @@ const quotes = [
 ]
 
 /***
- * Create duplicate array
+ * Create duplicate array using a for loop to iterate through 'quotes' array and push each element to copyArray
  */
 
 let copyArray = [];
@@ -95,21 +95,11 @@ quotesCopy(quotes);
 
 /***
  * `getRandomQuote` function
- * Uses Math.random() to generate a random number between 1 and the length of the parameter array and subtracts 1 to get the proper index position
+ * Uses Math.random() to generate a random number between 1 and the length of the parameter array 
+ * and subtracts 1 to get the proper index position
+ * Conditional statement used to determine if 'copyArray' is spliced empty in which case this function 
+ * calls again the 'quotesCopy' function and refills it
 ***/
-
-// function shuffleQuotes(arr) {
-//   var j, x, i;
-//   for (i = arr.length - 1; i > 0; i--) {
-//       j = Math.floor(Math.random() * (i + 1));
-//       x = arr[i];
-//       arr[i] = arr[j];
-//       arr[j] = x;
-//   }
-//   return arr;
-// }
-
-// shuffleQuotes(copyArray);
 
 var selection = [];
 function selectQuote(arr) {
@@ -121,9 +111,6 @@ function selectQuote(arr) {
   }
   return selection;
 }
-
-
-
 
 /***
  * 'randomRGB' function

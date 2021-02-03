@@ -98,18 +98,18 @@ quotesCopy(quotes);
  * Uses Math.random() to generate a random number between 1 and the length of the parameter array and subtracts 1 to get the proper index position
 ***/
 
-function shuffleQuotes(arr) {
-  var j, x, i;
-  for (i = arr.length - 1; i > 0; i--) {
-      j = Math.floor(Math.random() * (i + 1));
-      x = arr[i];
-      arr[i] = arr[j];
-      arr[j] = x;
-  }
-  return arr;
-}
+// function shuffleQuotes(arr) {
+//   var j, x, i;
+//   for (i = arr.length - 1; i > 0; i--) {
+//       j = Math.floor(Math.random() * (i + 1));
+//       x = arr[i];
+//       arr[i] = arr[j];
+//       arr[j] = x;
+//   }
+//   return arr;
+// }
 
-shuffleQuotes(copyArray);
+// shuffleQuotes(copyArray);
 
 var selection = [];
 function selectQuote(arr) {
@@ -118,7 +118,6 @@ function selectQuote(arr) {
   selection = arr.splice(randomNumber, 1);
   if (arr.length === 0) {
     quotesCopy(quotes);
-    shuffleQuotes(arr);
   }
   return selection;
 }
